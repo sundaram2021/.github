@@ -4,6 +4,9 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write
+
 jobs:
   comment-with-action:
     runs-on: ubuntu-latest
@@ -14,10 +17,10 @@ jobs:
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v4
         with:
-          issue-number: ${{ github.event.pull_request.number || github.event.issue.number }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
             This is a multi-line test comment
-            - With GitHub **Markdown** :sparkles:
+            - With GitHub **Markdown** ✨
             - Created by [create-or-update-comment][1]
 
             [1]: https://github.com/peter-evans/create-or-update-comment
