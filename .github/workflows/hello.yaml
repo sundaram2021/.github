@@ -1,6 +1,6 @@
 name: Hello World Workflow
 
-on: [Push]
+on: [push]
 
 
 jobs: 
