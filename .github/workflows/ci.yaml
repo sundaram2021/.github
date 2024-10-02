@@ -6,6 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: Run one line Script
         run: echo "Hello World !"
